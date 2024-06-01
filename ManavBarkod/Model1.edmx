@@ -1,0 +1,231 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="DBManavModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="TBLFatura">
+          <Key>
+            <PropertyRef Name="FaturaID" />
+          </Key>
+          <Property Name="FaturaID" Type="smallint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Tutar" Type="decimal" Precision="6" Scale="2" Nullable="false" />
+          <Property Name="Tarih" Type="date" />
+        </EntityType>
+        <EntityType Name="TBLFaturaMeyve">
+          <Key>
+            <PropertyRef Name="FaturaID" />
+          </Key>
+          <Property Name="FaturaID" Type="smallint" Nullable="false" />
+          <Property Name="Portakal" Type="decimal" Precision="4" Scale="2" />
+          <Property Name="Muz" Type="decimal" Precision="4" Scale="2" />
+          <Property Name="Elma" Type="decimal" Precision="4" Scale="2" />
+          <Property Name="Seftali" Type="decimal" Precision="4" Scale="2" />
+          <Property Name="Cilek" Type="decimal" Precision="4" Scale="2" />
+          <Property Name="Armut" Type="decimal" Precision="4" Scale="2" />
+          <Property Name="Karpuz" Type="decimal" Precision="4" Scale="2" />
+          <Property Name="Kiraz" Type="decimal" Precision="4" Scale="2" />
+        </EntityType>
+        <EntityType Name="TBLFaturaSebze">
+          <Key>
+            <PropertyRef Name="FaturaID" />
+          </Key>
+          <Property Name="FaturaID" Type="smallint" Nullable="false" />
+          <Property Name="Domates" Type="decimal" Precision="4" Scale="2" />
+          <Property Name="Limon" Type="decimal" Precision="4" Scale="2" />
+          <Property Name="Salatalık" Type="decimal" Precision="4" Scale="2" />
+          <Property Name="Ispanak" Type="decimal" Precision="4" Scale="2" />
+          <Property Name="Patlıcan" Type="decimal" Precision="4" Scale="2" />
+          <Property Name="Marul" Type="decimal" Precision="4" Scale="2" />
+          <Property Name="Havuc" Type="decimal" Precision="4" Scale="2" />
+          <Property Name="YesilSogan" Type="decimal" Precision="4" Scale="2" />
+          <Property Name="Brokoli" Type="decimal" Precision="4" Scale="2" />
+          <Property Name="Sogan" Type="decimal" Precision="4" Scale="2" />
+          <Property Name="Maydanoz" Type="decimal" Precision="4" Scale="2" />
+        </EntityType>
+        <EntityType Name="TBLPassword">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="smallint" Nullable="false" />
+          <Property Name="Password" Type="varchar" MaxLength="4" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TBLUrunler">
+          <Key>
+            <PropertyRef Name="UrunID" />
+          </Key>
+          <Property Name="UrunID" Type="smallint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="UrunAd" Type="varchar" MaxLength="25" Nullable="false" />
+          <Property Name="UrunFiyat" Type="decimal" Precision="5" Scale="2" Nullable="false" />
+          <Property Name="Tur" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="Stok" Type="decimal" Precision="5" Scale="2" Nullable="false" />
+          <Property Name="Maliyet" Type="decimal" Precision="5" Scale="2" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="DBManavModelStoreContainer">
+          <EntitySet Name="TBLFatura" EntityType="Self.TBLFatura" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TBLFaturaMeyve" EntityType="Self.TBLFaturaMeyve" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TBLFaturaSebze" EntityType="Self.TBLFaturaSebze" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TBLPassword" EntityType="Self.TBLPassword" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TBLUrunler" EntityType="Self.TBLUrunler" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="DBManavModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="DBManavEntities1" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="TBLFaturaMeyve" EntityType="DBManavModel.TBLFaturaMeyve" />
+          <EntitySet Name="TBLFaturaSebze" EntityType="DBManavModel.TBLFaturaSebze" />
+          <EntitySet Name="TBLFatura" EntityType="DBManavModel.TBLFatura" />
+          <EntitySet Name="TBLUrunler" EntityType="DBManavModel.TBLUrunler" />
+          <EntitySet Name="TBLPassword" EntityType="DBManavModel.TBLPassword" />
+        </EntityContainer>
+        <EntityType Name="TBLFaturaMeyve">
+          <Key>
+            <PropertyRef Name="FaturaID" />
+          </Key>
+          <Property Name="FaturaID" Type="Int16" Nullable="false" />
+          <Property Name="Portakal" Type="Decimal" Precision="4" Scale="2" />
+          <Property Name="Muz" Type="Decimal" Precision="4" Scale="2" />
+          <Property Name="Elma" Type="Decimal" Precision="4" Scale="2" />
+          <Property Name="Seftali" Type="Decimal" Precision="4" Scale="2" />
+          <Property Name="Cilek" Type="Decimal" Precision="4" Scale="2" />
+          <Property Name="Armut" Type="Decimal" Precision="4" Scale="2" />
+          <Property Name="Karpuz" Type="Decimal" Precision="4" Scale="2" />
+          <Property Name="Kiraz" Type="Decimal" Precision="4" Scale="2" />
+        </EntityType>
+        <EntityType Name="TBLFaturaSebze">
+          <Key>
+            <PropertyRef Name="FaturaID" />
+          </Key>
+          <Property Name="FaturaID" Type="Int16" Nullable="false" />
+          <Property Name="Domates" Type="Decimal" Precision="4" Scale="2" />
+          <Property Name="Limon" Type="Decimal" Precision="4" Scale="2" />
+          <Property Name="Salatalık" Type="Decimal" Precision="4" Scale="2" />
+          <Property Name="Ispanak" Type="Decimal" Precision="4" Scale="2" />
+          <Property Name="Patlıcan" Type="Decimal" Precision="4" Scale="2" />
+          <Property Name="Marul" Type="Decimal" Precision="4" Scale="2" />
+          <Property Name="Havuc" Type="Decimal" Precision="4" Scale="2" />
+          <Property Name="YesilSogan" Type="Decimal" Precision="4" Scale="2" />
+          <Property Name="Brokoli" Type="Decimal" Precision="4" Scale="2" />
+          <Property Name="Sogan" Type="Decimal" Precision="4" Scale="2" />
+          <Property Name="Maydanoz" Type="Int16" />
+        </EntityType>
+        <EntityType Name="TBLFatura">
+          <Key>
+            <PropertyRef Name="FaturaID" />
+          </Key>
+          <Property Name="FaturaID" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Tutar" Type="Decimal" Nullable="false" Precision="6" Scale="2" />
+          <Property Name="Tarih" Type="DateTime" Precision="0" />
+        </EntityType>
+        <EntityType Name="TBLUrunler">
+          <Key>
+            <PropertyRef Name="UrunID" />
+          </Key>
+          <Property Name="UrunID" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UrunAd" Type="String" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Name="UrunFiyat" Type="Decimal" Nullable="false" Precision="5" Scale="2" />
+          <Property Name="Tur" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="Stok" Type="Decimal" Nullable="false" Precision="5" Scale="2" />
+          <Property Name="Maliyet" Type="Decimal" Nullable="false" Precision="5" Scale="2" />
+        </EntityType>
+        <EntityType Name="TBLPassword">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int16" Nullable="false" />
+          <Property Name="Password" Type="String" Nullable="false" MaxLength="4" FixedLength="false" Unicode="false" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="DBManavModelStoreContainer" CdmEntityContainer="DBManavEntities1">
+          <EntitySetMapping Name="TBLFaturaMeyve">
+            <EntityTypeMapping TypeName="DBManavModel.TBLFaturaMeyve">
+              <MappingFragment StoreEntitySet="TBLFaturaMeyve">
+                <ScalarProperty Name="Kiraz" ColumnName="Kiraz" />
+                <ScalarProperty Name="Karpuz" ColumnName="Karpuz" />
+                <ScalarProperty Name="Armut" ColumnName="Armut" />
+                <ScalarProperty Name="Cilek" ColumnName="Cilek" />
+                <ScalarProperty Name="Seftali" ColumnName="Seftali" />
+                <ScalarProperty Name="Elma" ColumnName="Elma" />
+                <ScalarProperty Name="Muz" ColumnName="Muz" />
+                <ScalarProperty Name="Portakal" ColumnName="Portakal" />
+                <ScalarProperty Name="FaturaID" ColumnName="FaturaID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TBLFaturaSebze">
+            <EntityTypeMapping TypeName="DBManavModel.TBLFaturaSebze">
+              <MappingFragment StoreEntitySet="TBLFaturaSebze">
+                <ScalarProperty Name="Maydanoz" ColumnName="Maydanoz" />
+                <ScalarProperty Name="Sogan" ColumnName="Sogan" />
+                <ScalarProperty Name="Brokoli" ColumnName="Brokoli" />
+                <ScalarProperty Name="YesilSogan" ColumnName="YesilSogan" />
+                <ScalarProperty Name="Havuc" ColumnName="Havuc" />
+                <ScalarProperty Name="Marul" ColumnName="Marul" />
+                <ScalarProperty Name="Patlıcan" ColumnName="Patlıcan" />
+                <ScalarProperty Name="Ispanak" ColumnName="Ispanak" />
+                <ScalarProperty Name="Salatalık" ColumnName="Salatalık" />
+                <ScalarProperty Name="Limon" ColumnName="Limon" />
+                <ScalarProperty Name="Domates" ColumnName="Domates" />
+                <ScalarProperty Name="FaturaID" ColumnName="FaturaID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TBLFatura">
+            <EntityTypeMapping TypeName="DBManavModel.TBLFatura">
+              <MappingFragment StoreEntitySet="TBLFatura">
+                <ScalarProperty Name="Tarih" ColumnName="Tarih" />
+                <ScalarProperty Name="Tutar" ColumnName="Tutar" />
+                <ScalarProperty Name="FaturaID" ColumnName="FaturaID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TBLUrunler">
+            <EntityTypeMapping TypeName="DBManavModel.TBLUrunler">
+              <MappingFragment StoreEntitySet="TBLUrunler">
+                <ScalarProperty Name="Maliyet" ColumnName="Maliyet" />
+                <ScalarProperty Name="Stok" ColumnName="Stok" />
+                <ScalarProperty Name="Tur" ColumnName="Tur" />
+                <ScalarProperty Name="UrunFiyat" ColumnName="UrunFiyat" />
+                <ScalarProperty Name="UrunAd" ColumnName="UrunAd" />
+                <ScalarProperty Name="UrunID" ColumnName="UrunID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TBLPassword">
+            <EntityTypeMapping TypeName="DBManavModel.TBLPassword">
+              <MappingFragment StoreEntitySet="TBLPassword">
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
