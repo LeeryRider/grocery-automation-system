@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DBManavModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="TBLFatura">
+    <Key>
+      <PropertyRef Name="UrunID" />
+    </Key>
+    <Property Name="UrunID" Type="Int16" Nullable="false" />
+    <Property Name="Tutar" Type="Decimal" Precision="6" Scale="2" Nullable="false" />
+    <Property Name="Tarih" Type="DateTime" Precision="0" />
+    <Property Name="UrunMiktar" Type="Decimal" Precision="5" Scale="2" />
+  </EntityType>
+  <EntityType Name="TBLUrunler">
+    <Key>
+      <PropertyRef Name="UrunID" />
+    </Key>
+    <Property Name="UrunID" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UrunAd" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="UrunFiyat" Type="Decimal" Precision="5" Scale="2" Nullable="false" />
+    <Property Name="Tur" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Stok" Type="Decimal" Precision="5" Scale="2" Nullable="false" />
+    <Property Name="Maliyet" Type="Decimal" Precision="5" Scale="2" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="DBManavEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="TBLFatura" EntityType="Self.TBLFatura" />
+    <EntitySet Name="TBLUrunler" EntityType="Self.TBLUrunler" />
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DBManavModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="TBLFatura">
+    <Key>
+      <PropertyRef Name="UrunID" />
+    </Key>
+    <Property Name="UrunID" Type="smallint" Nullable="false" />
+    <Property Name="Tutar" Type="decimal" Precision="6" Scale="2" Nullable="false" />
+    <Property Name="Tarih" Type="date" />
+    <Property Name="UrunMiktar" Type="decimal" Precision="5" Scale="2" />
+  </EntityType>
+  <EntityType Name="TBLUrunler">
+    <Key>
+      <PropertyRef Name="UrunID" />
+    </Key>
+    <Property Name="UrunID" Type="smallint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UrunAd" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="UrunFiyat" Type="decimal" Precision="5" Scale="2" Nullable="false" />
+    <Property Name="Tur" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Stok" Type="decimal" Precision="5" Scale="2" Nullable="false" />
+    <Property Name="Maliyet" Type="decimal" Precision="5" Scale="2" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="DBManavModelStoreContainer">
+    <EntitySet Name="TBLFatura" EntityType="Self.TBLFatura" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBLUrunler" EntityType="Self.TBLUrunler" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

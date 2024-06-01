@@ -1,0 +1,12 @@
+C:\Users\Sapphiree\Desktop\C# Form Proje\ManavBarkod\DAL\bin\Debug\DAL.dll.config
+C:\Users\Sapphiree\Desktop\C# Form Proje\ManavBarkod\DAL\bin\Debug\DAL.dll
+C:\Users\Sapphiree\Desktop\C# Form Proje\ManavBarkod\DAL\bin\Debug\DAL.pdb
+C:\Users\Sapphiree\Desktop\C# Form Proje\ManavBarkod\DAL\bin\Debug\EntityFramework.dll
+C:\Users\Sapphiree\Desktop\C# Form Proje\ManavBarkod\DAL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Sapphiree\Desktop\C# Form Proje\ManavBarkod\DAL\bin\Debug\EntityFramework.xml
+C:\Users\Sapphiree\Desktop\C# Form Proje\ManavBarkod\DAL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Sapphiree\Desktop\C# Form Proje\ManavBarkod\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
+C:\Users\Sapphiree\Desktop\C# Form Proje\ManavBarkod\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+C:\Users\Sapphiree\Desktop\C# Form Proje\ManavBarkod\DAL\obj\Debug\DAL.csproj.CopyComplete
+C:\Users\Sapphiree\Desktop\C# Form Proje\ManavBarkod\DAL\obj\Debug\DAL.dll
+C:\Users\Sapphiree\Desktop\C# Form Proje\ManavBarkod\DAL\obj\Debug\DAL.pdb
